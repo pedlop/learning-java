@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 /**
  * @author pedro_victor
- * Atividades do curso disponíveis em:
+ * Lista de Atividades do curso disponíveis em:
  * https://www.slideshare.net/loianeg/curso-java-bsico-exerccios-aulas-11-12-13
  */
 public class AtividadesCursoJava {
@@ -159,10 +159,12 @@ public class AtividadesCursoJava {
         double inss = salario * 0.08;
         double sindicato = salario * 0.05;
         double impRenda = salario * 0.11;
-        double salarioLiq = salario - (inss + sindicato + impRenda);
+        double descontos = inss + sindicato + impRenda;
+        double salarioLiq = salario - (descontos);
         System.out.println("O seu salário bruto é de " + salario + " reais.");
         System.out.println("Pago ao INSS " + inss + " reais.");
         System.out.println("Pago ao sindicato " + sindicato + " reais.");
+        System.out.println("Total descontos: " + descontos);
         System.out.println("O seu salário liquido é de " + salarioLiq + " reais.");
     }
     

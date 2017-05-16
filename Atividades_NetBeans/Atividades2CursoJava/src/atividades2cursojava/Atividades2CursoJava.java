@@ -1,14 +1,17 @@
 package atividades2cursojava;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 /**
  * Lista de Atividades 2 do curso disponíveis em:
  * https://www.slideshare.net/loianeg/curso-java-basico-exercicios-aulas-14-15
+ * IF-ELSE/SWITCH-CASE
+ *
  * @author pedro_victor
  */
 public class Atividades2CursoJava {
-    
+
     /**
      * Questão número 1
      */
@@ -23,7 +26,7 @@ public class Atividades2CursoJava {
             System.out.println("O maior número é: " + num2);
         }
     }
-    
+
     /**
      * Questão número 2
      */
@@ -37,7 +40,7 @@ public class Atividades2CursoJava {
             System.out.println("O número " + numero + " é positivo.");
         }
     }
-    
+
     /**
      * Questão número 3
      */
@@ -57,7 +60,7 @@ public class Atividades2CursoJava {
                 break;
         }
     }
-    
+
     /**
      * Questão número 4
      */
@@ -77,7 +80,7 @@ public class Atividades2CursoJava {
                 System.out.println("A letra " + letra + " é uma consoante.");
         }
     }
-    
+
     /**
      * Questão número 5
      */
@@ -86,7 +89,7 @@ public class Atividades2CursoJava {
         System.out.println("Digite suas duas notas: ");
         double nota1 = scan.nextDouble();
         double nota2 = scan.nextDouble();
-        double media = (nota1 + nota2)/2;
+        double media = (nota1 + nota2) / 2;
         if (media >= 7 && media < 10) {
             System.out.println("Aprovado");
         } else if (media == 10) {
@@ -95,7 +98,7 @@ public class Atividades2CursoJava {
             System.out.println("Reprovado");
         }
     }
-    
+
     /**
      * Questão número 6
      */
@@ -113,7 +116,7 @@ public class Atividades2CursoJava {
             System.out.println("O maior número é: " + num3);
         }
     }
-    
+
     /**
      * Questão número 7
      */
@@ -138,7 +141,7 @@ public class Atividades2CursoJava {
             System.out.println("O menor número é: " + num3);
         }
     }
-    
+
     /**
      * Questão número 8
      */
@@ -156,7 +159,7 @@ public class Atividades2CursoJava {
             System.out.println("Você deve comprar o produto no valor de: " + preco3 + " reais.");
         }
     }
-    
+
     /**
      * Questão número 9
      */
@@ -180,7 +183,7 @@ public class Atividades2CursoJava {
             System.out.println(num1 + " - " + num2 + " - " + num3);
         }
     }
-    
+
     /**
      * Questão número 10
      */
@@ -203,7 +206,7 @@ public class Atividades2CursoJava {
                 break;
         }
     }
-    
+
     /**
      * Questão número 11
      */
@@ -221,7 +224,7 @@ public class Atividades2CursoJava {
         } else {
             aumento = 0.05;
         }
-        double valorAumento = salario*aumento;
+        double valorAumento = salario * aumento;
         double reajuste = salario + valorAumento;
         double percentual = aumento * 100;
         System.out.println("Salario antes do reajuste: R$ " + salario);
@@ -229,7 +232,7 @@ public class Atividades2CursoJava {
         System.out.println("Valor do aumento: R$ " + valorAumento);
         System.out.println("Novo salário: R$ " + reajuste);
     }
-    
+
     /**
      * Questão número 12
      */
@@ -241,7 +244,7 @@ public class Atividades2CursoJava {
         double salario = valorHora * horasMes;
         double inss = salario * 0.1;
         double impRenda;
-        double fgts = salario * 0.11;       
+        double fgts = salario * 0.11;
         if (salario <= 900) {
             impRenda = 0;
         } else if (salario > 900 && salario <= 1500) {
@@ -249,22 +252,22 @@ public class Atividades2CursoJava {
         } else if (salario > 1500 && salario <= 2500) {
             impRenda = 0.1;
         } else {
-            impRenda= 0.2;
+            impRenda = 0.2;
         }
-        int ir = (int) (impRenda *100);
-        int inssP = (int) (0.1*100);
-        int fgtsP = (int) (0.11*100);
+        int ir = (int) (impRenda * 100);
+        int inssP = (int) (0.1 * 100);
+        int fgtsP = (int) (0.11 * 100);
         double imposto = salario * impRenda;
         double descontos = inss + imposto;
         double salarioLiq = salario - (descontos);
-        System.out.println("Salário Bruto: (" + valorHora + " * " + horasMes + ")\t: R$ " +  salario);
+        System.out.println("Salário Bruto: (" + valorHora + " * " + horasMes + ")\t: R$ " + salario);
         System.out.println("(-) IR (" + ir + "%)\t\t\t: R$ " + imposto);
         System.out.println("(-) INSS (" + inssP + "%)\t\t\t: R$ " + inss);
         System.out.println("FGTS (" + fgtsP + "%)\t\t\t: R$ " + fgts);
         System.out.println("Total de descontos\t\t: R$ " + descontos);
         System.out.println("Salário Líquido\t\t\t: R$ " + salarioLiq);
     }
-    
+
     /**
      * Questão número 13
      */
@@ -298,7 +301,7 @@ public class Atividades2CursoJava {
                 System.out.println("Não existe este dia!");
         }
     }
-    
+
     /**
      * Questão número 14
      */
@@ -307,7 +310,7 @@ public class Atividades2CursoJava {
         System.out.println("Digite suas duas notas: ");
         double nota1 = scan.nextDouble();
         double nota2 = scan.nextDouble();
-        double media = (nota1 + nota2)/2;
+        double media = (nota1 + nota2) / 2;
         String conceito = null;
         if (media >= 9 && media <= 10) {
             conceito = "A";
@@ -326,7 +329,7 @@ public class Atividades2CursoJava {
         System.out.println("Nota 2:" + nota2);
         System.out.println("Média: " + media);
         System.out.println("Conceito: " + conceito);
-        
+
         switch (conceito) {
             case "A":
             case "B":
@@ -341,6 +344,361 @@ public class Atividades2CursoJava {
                 System.out.println("Erro!");
                 break;
         }
+    }
+
+    /**
+     * Questão número 15
+     */
+    public static void Triangulo() {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Digite três valores, para os lados de um triângulo: ");
+        int lado1 = scan.nextInt();
+        int lado2 = scan.nextInt();
+        int lado3 = scan.nextInt();
+        if (((lado1 + lado2) > lado3) || ((lado1 + lado3) > lado2) || ((lado2 + lado3) > lado1)) {
+            if (lado1 == lado2 && lado2 == lado3) {
+                System.out.println("Temos em questão um Triângulo Equilátero!");
+            } else if (lado1 == lado2 || lado2 == lado3 || lado1 == lado3) {
+                System.out.println("Temos em questão um Triângulo Isósceles!");
+            } else {
+                System.out.println("Temos em questão um Triângulo Escaleno!");
+            }
+        } else {
+            System.out.println("Não temos nenhum triângulo em questão!");
+        }
+    }
+
+    /**
+     * Questão número 16
+     */
+    public static void EquacaoSegundoGrau() {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Para calcular as raizes informe os valores de: ");
+        System.out.println("a: ");
+        int a = scan.nextInt();
+        if (a == 0) {
+            System.out.println("Com o valor de 'a' zerado esta equação não é do Segundo Grau!");
+        } else {
+            System.out.println("b: ");
+            int b = scan.nextInt();
+            System.out.println("c: ");
+            int c = scan.nextInt();
+            double delta = ((b * b) - (4 * a * c));
+            double bhaskaraRaiz1 = (-b + (Math.sqrt(delta))) / (2 * a);
+            double bhaskaraRaiz2 = (-b - (Math.sqrt(delta))) / (2 * a);
+            if (delta < 0) {
+                System.out.println("Equação não possui raízes reais!");
+            } else if (delta == 0) {
+                System.out.println("Equação possui apenas 1 (uma) raíz real!");
+            } else {
+                System.out.println("Equação possui 2 (duas) raízes reais!\nPrimeira Raiz = " + bhaskaraRaiz1 + "\nSegunda Raiz = " + bhaskaraRaiz2);
+            }
+        }
+    }
+    
+    /**
+     * Questão número 17
+     */
+    public static void Bissexto() {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Entre com um ano: ");
+        int ano = scan.nextInt();
+        if ( (ano % 4) == 0) {
+            System.out.println("O ano " + ano + " é bissexto!");
+        } else {
+            System.out.println("O ano " + ano + " NÃO é bissexto!");
+        }
+    }
+    
+    /**
+     * Questão número 18
+     */
+    public static void ParImpar() {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Entre com um número inteiro: ");
+        int num = scan.nextInt();
+        if ( (num % 2) == 0) {
+            System.out.println("O número " + num + " é PAR!");
+        } else {
+            System.out.println("O numéro " + num + " é IMPAR!");
+        }
+    }
+    
+    /**
+     * Questão número 19
+     */
+    public static void Operacao() {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Entre com dois números: ");
+        double num1 = scan.nextDouble();
+        double num2 = scan.nextDouble();
+        String parImpar;
+        String posNeg;
+        System.out.println("Digite o número da operação que desejas realizar!");
+        System.out.println("1 - Soma");
+        System.out.println("2 - Subtração");
+        System.out.println("3 - Multiplicação");
+        System.out.println("4 - Divisão");
+        int resultado = scan.nextInt();
+        switch (resultado) {
+            case 1:
+                double soma = num1 + num2;
+                if (soma < 0) {
+                    posNeg = "Negativo";
+                } else {
+                    posNeg = "Positivo";
+                }
+                if ( (soma%2) == 0) {
+                    parImpar = "Par";
+                } else {
+                    parImpar = "Impar";
+                }
+                System.out.println("O resultado da soma é: " + soma + "\nEste número é " + posNeg + " e " + parImpar);
+                break;
+            case 2:
+                double sub = num1 - num2;
+                if (sub < 0) {
+                    posNeg = "Negativo";
+                } else {
+                    posNeg = "Positivo";
+                }
+                if ( (sub%2) == 0) {
+                    parImpar = "Par";
+                } else {
+                    parImpar = "Impar";
+                }
+                System.out.println("O resultado da soma é: " + sub + "\nEste número é " + posNeg + " e " + parImpar);
+                break;
+            case 3:
+                double mult = num1 * num2;
+                if (mult < 0) {
+                    posNeg = "Negativo";
+                } else {
+                    posNeg = "Positivo";
+                }
+                if ( (mult%2) == 0) {
+                    parImpar = "Par";
+                } else {
+                    parImpar = "Impar";
+                }
+                System.out.println("O resultado da soma é: " + mult + "\nEste número é " + posNeg + " e " + parImpar);
+                break;
+            case 4:
+                double div = num1 * num2;
+                if (div < 0) {
+                    posNeg = "Negativo";
+                } else {
+                    posNeg = "Positivo";
+                }
+                if ( (div%2) == 0) {
+                    parImpar = "Par";
+                } else {
+                    parImpar = "Impar";
+                }
+                System.out.println("O resultado da soma é: " + div + "\nEste número é " + posNeg + " e " + parImpar);
+                break;
+        }
+    }
+    
+    /**
+     * Questão número 20
+     */
+    public static void Crime() {
+        int cont = 0;
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Responda com sim ou nao.\nTelefonou para a vítima?");
+        String resposta1 = scan.nextLine();
+        if ("sim".equals(resposta1)) {
+            cont++;
+        }
+        System.out.println("Esteve no local do crime?");
+        String resposta2 = scan.nextLine();
+        if ("sim".equals(resposta2)) {
+            cont++;
+        }
+        System.out.println("Mora perto da vítima?");
+        String resposta3 = scan.nextLine();
+        if ("sim".equals(resposta3)) {
+            cont++;
+        }
+        System.out.println("Devia para a vítima?");
+        String resposta4 = scan.nextLine();
+        if ("sim".equals(resposta4)) {
+            cont++;
+        }
+        System.out.println("Já trabalhou para a vítima?");
+        String resposta5 = scan.nextLine();
+        if ("sim".equals(resposta5)) {
+            cont++;
+        }
+        
+        switch (cont) {
+            case 2:
+                System.out.println("Suspeita!");
+            case 3:
+            case 4:
+                System.out.println("Cúmplice!");
+                break;
+            case 5:
+                System.out.println("Assassino!");
+                break;
+            default:
+                System.out.println("Inocente!");
+        }
+    }
+    
+    /**
+     * Questão número 21
+     */
+    public static void Posto() {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Quantidade de litros vendidos: ");
+        double litros = scan.nextDouble();
+        System.out.println("Tipo de combustível, A-álcool ou G-gasolina: ");
+        String combustivel = scan.next();
+        double totalA = litros*1.9;
+        double totalG = litros*2.5;
+        double desconto = 0;
+        if (litros <= 20 && "A".equals(combustivel)) {
+            desconto = 0.03*totalA;
+        } else if (litros > 20 && "A".equals(combustivel)) {
+            desconto = 0.05*totalA;
+        } else if (litros <= 20 && "G".equals(combustivel)) {
+            desconto = 0.04*totalG;
+        } else if (litros > 20 && "G".equals(combustivel)) {
+            desconto = 0.06*totalG;
+        } else {
+            System.out.println("Erro!");
+        }
+        double finalA = totalA - desconto;
+        double finalG = totalG - desconto;
+        switch (combustivel) {
+            case "A":
+                System.out.println("Valor Total - Álcool SEM desconto: " + totalA);
+                System.out.println("Valor Final - Álcool COM desconto (a se pagar): " + finalA);
+                break;
+            case "G":
+                System.out.println("Valor Total - Gasolina SEM desconto: " + totalG);
+                System.out.println("Valor Final - Gasolina COM desconto (a se pagar): " + finalG);
+                break;
+            default:
+                System.out.println("Combustível inexistente!");
+                break;
+        }
+    }
+    
+    /**
+     * Questão número 22
+     */
+    public static void Fruteira() {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Quantidade de morangos adquiridos(em Kg): ");
+        double qtdMorango = scan.nextDouble();
+        System.out.println("Quantidade de maçãs adquiridas (em Kg): ");
+        double qtdMaca = scan.nextDouble();
+        double qtdFrutas = qtdMorango + qtdMaca;
+        double valorMorango;
+        double valorMaca;
+        if (qtdMorango <= 5) {
+            valorMorango = 2.5*qtdMorango;
+        } else {
+            valorMorango = 2.2*qtdMorango;
+        }
+        if (qtdMaca <= 5) {
+            valorMaca = 1.8*qtdMaca;
+        } else {
+            valorMaca = 1.5*qtdMaca;
+        }
+        double valorTotal = valorMorango + valorMaca;
+        if (qtdFrutas > 8 || valorTotal > 25) {
+            valorTotal = valorTotal - (valorTotal*0.1);
+        }
+        System.out.println("Valor a se pagar: R$ " + valorTotal);
+    }
+    
+    public static void TabajaraHiper() {
+        DecimalFormat df = new DecimalFormat("R$ #,###.00");
+        DecimalFormat kg = new DecimalFormat("#.# kg");
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Tipo de carne, F-File Duplo ou A-Alcatra ou P-Picanha: ");
+        String carne = scan.next();
+        System.out.println("Quantidade de quilos de carne comprada: ");
+        double quilos = scan.nextDouble();
+        System.out.println("Tipo de pagamento, CT-Catão Tabajara ou D-Dinheiro ou C-Cheque ou CA-Cartão Qualquer: ");
+        String card = scan.next();
+        double preco = 0;
+        double valorDesconto = 0;
+        double precoDesconto = 0;
+        double desconto = 0.05;
+        switch (card) {
+            case "CT":
+                //card = "Cartão Tabajara";
+                if ("F".equals(carne) && quilos <= 5) {
+                    preco = 4.9*quilos;
+                    carne = "File Duplo";
+                } else if ("F".equals(carne) && quilos > 5) {
+                    preco = 5.8*quilos;
+                    carne = "File Duplo";
+                } else if ("A".equals(carne) && quilos <= 5) {
+                    preco = 5.9*quilos;
+                    carne = "Alcatra";
+                } else if ("A".equals(carne) && quilos > 5) {
+                    preco = 6.8*quilos;
+                    carne = "Alcatra";
+                } else if ("P".equals(carne) && quilos <= 5) {
+                    preco = 6.9*quilos;
+                    carne = "Picanha";
+                } else if ("P".equals(carne) && quilos > 5) {
+                    preco = 7.8*quilos;
+                    carne = "Picanha";
+                } else {
+                    System.out.println("Error!");
+                }
+                valorDesconto = preco * desconto;
+                precoDesconto = preco - valorDesconto;
+                break;
+            case "D":
+                //card = "Dinheiro";
+            case "C":
+                //card = "Cheque";                
+            case "CA":
+                //card = "Cartão";                
+                if ("F".equals(carne) && quilos <= 5) {
+                    preco = 4.9*quilos;
+                    carne = "File Duplo";
+                } else if ("F".equals(carne) && quilos > 5) {
+                    preco = 5.8*quilos;
+                    carne = "File Duplo";
+                } else if ("A".equals(carne) && quilos <= 5) {
+                    preco = 5.9*quilos;
+                    carne = "Alcatra";
+                } else if ("A".equals(carne) && quilos > 5) {
+                    preco = 6.8*quilos;
+                    carne = "Alcatra";
+                } else if ("P".equals(carne) && quilos <= 5) {
+                    preco = 6.9*quilos;
+                    carne = "Picanha";
+                } else if ("P".equals(carne) && quilos > 5) {
+                    preco = 7.8*quilos;
+                    carne = "Picanha";
+                } else {
+                    System.out.println("Error!");
+                }
+                valorDesconto = 0;
+                precoDesconto = preco;
+                break;
+            default:
+                System.out.println("Não existe.");
+                break;
+        }
+        System.out.println("|---------------------------------------|");
+        System.out.println("|Tipo de Carne\t\t: " + carne + "\t|");
+        System.out.println("|Quantidade de Carne\t: " + (kg.format(quilos)) + "\t\t|");
+        System.out.println("|Preço Total\t\t: " + (df.format(preco)) + "\t|");
+        System.out.println("|Tipo de Pagamento\t: " + card + "\t\t|");
+        System.out.println("|Valor desconto\t\t: " + (df.format(valorDesconto)) + "\t|");
+        System.out.println("|Valor a pagar\t\t: " + (df.format(precoDesconto)) + "\t|");
+        System.out.println("|---------------------------------------|");
     }
 
     /**
@@ -395,36 +753,36 @@ public class Atividades2CursoJava {
                 Aprovacao();
                 break;
             case 15:
-                
+                Triangulo();
                 break;
             case 16:
-                
+                EquacaoSegundoGrau();
                 break;
             case 17:
-                
+                Bissexto();
                 break;
             case 18:
-                
+                ParImpar();
                 break;
             case 19:
-                
+                Operacao();
                 break;
             case 20:
-                
+                Crime();
                 break;
             case 21:
-                
+                Posto();
                 break;
             case 22:
-                
+                Fruteira();
                 break;
             case 23:
-                
-                break;  
+                TabajaraHiper();
+                break;
             default:
                 System.out.println("Não existe essa questão!");
                 break;
         }
     }
-    
+
 }

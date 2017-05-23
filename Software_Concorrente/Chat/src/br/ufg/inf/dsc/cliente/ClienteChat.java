@@ -1,6 +1,6 @@
 package br.ufg.inf.dsc.cliente;
 
-import org.omg.CORBA.portable.UnknownException;
+import java.net.UnknownHostException;
 
 import java.io.IOException;
 import java.net.Socket;
@@ -10,7 +10,7 @@ import java.net.Socket;
  */
 public class ClienteChat {
 
-    public static void main(String[] args) throws UnknownException, IOException {
+    public static void main(String[] args) throws UnknownHostException, IOException {
 
         Socket servidor = new Socket("127.0.0.1", 12345);
         new Thread(new EnviarMensagem(servidor)).start();

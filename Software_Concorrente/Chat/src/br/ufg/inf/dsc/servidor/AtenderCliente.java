@@ -22,10 +22,12 @@ public class AtenderCliente implements Runnable{
 			Scanner escutador = new Scanner(this.cli.getInputStream());
 			do{
 				String mensagem = escutador.nextLine();
-				ServidorChat.distribuirMensagem(mensagem,this.cli);
-			}while(true);
+				ServidorChat.distribuirMensagem(mensagem, this.cli);
+			}while (true);
 		} catch (IOException e) {
 			e.printStackTrace();
+		} catch (java.util.NoSuchElementException e) {
+			ServidorChat.remover(cli);
 		}
 	}
 }

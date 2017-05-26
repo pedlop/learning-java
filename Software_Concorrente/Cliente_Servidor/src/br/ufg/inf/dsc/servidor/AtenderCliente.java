@@ -53,11 +53,17 @@ public class AtenderCliente implements Runnable {
 				if (carros.containsKey(comando)){
 					String resposta = carros.get(comando);
 					saidaDadosParaCliente.println(resposta);
+				}else if (comando.equals("all")) {
+					for (String key : carros.keySet()) {
+						System.out.println(key);
+						String result = carros.get(key);
+						saidaDadosParaCliente.println(result);
+					}
 				}else if (comando.equals("fim")){
-					saidaDadosParaCliente.println("Usu�rio desconectado!!!");
+					saidaDadosParaCliente.println("Usuário desconectado!!!");
 					break;
 				}else{
-					saidaDadosParaCliente.println("Solicita��o invalida!!!");
+					saidaDadosParaCliente.println("Solicitação invalida!!!");
 				}
 			}
 			receberDadosDoCliente.close();

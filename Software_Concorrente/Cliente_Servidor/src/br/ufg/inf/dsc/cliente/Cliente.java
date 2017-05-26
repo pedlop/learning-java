@@ -1,5 +1,7 @@
 package br.ufg.inf.dsc.cliente;
 
+import br.ufg.inf.dsc.servidor.AtenderCliente;
+
 import java.io.IOException;
 import java.io.PrintStream;
 import java.net.Socket;
@@ -8,7 +10,7 @@ import java.util.Scanner;
 
 public class Cliente {
 	public static void main(String[] args) throws UnknownHostException, IOException {
-		Socket servidor = new Socket("127.0.0.1", 12345);
+		Socket servidor = new Socket("localhost", 12345);
 		PrintStream saidaDeDadosParaOServidor = new PrintStream(servidor.getOutputStream());
 		Scanner entradaDeDadosDoServidor = new Scanner(servidor.getInputStream());
 		Scanner leitor = new Scanner(System.in);
@@ -19,7 +21,13 @@ public class Cliente {
 			saidaDeDadosParaOServidor.println(mensagem);
 			String resposta = entradaDeDadosDoServidor.nextLine();
 			System.out.println(resposta);
-			
+			if(mensagem.equals("all")){
+				for (String key : AtenderCliente.carros.keySet()) {
+				//for (int i = 0; i < 30; i++) {
+					String result = entradaDeDadosDoServidor.nextLine();
+					System.out.println(result);
+				}
+			}
 		}
 		
 		

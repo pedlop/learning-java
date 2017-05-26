@@ -19,10 +19,10 @@ public class EnviarMensagem implements Runnable {
     public void run() {
         try {
             Scanner leitor = new Scanner(System.in);
-            PrintWriter saidaServidor = new PrintWriter(this.servidor.getOutputStream());
+            PrintWriter saidaServidor = new PrintWriter(this.servidor.getOutputStream(), true);
             do {
                 String texto = leitor.nextLine();
-                saidaServidor.println("Pedro" + texto);
+                saidaServidor.println("Pedro: " + texto);
             } while (true);
         } catch (IOException e) {
             e.printStackTrace();
